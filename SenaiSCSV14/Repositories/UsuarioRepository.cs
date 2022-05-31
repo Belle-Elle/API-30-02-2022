@@ -26,10 +26,10 @@ namespace APISenaiSCS.Repositories
             return ctx.Usuario
              .Select(u => new Usuario()
              {
-                 id = u.id,
+                 Id = u.Id,
                  Nif = u.Nif,
              })
-             .FirstOrDefault(u => u.id == idUsuario);
+             .FirstOrDefault(u => u.Id == idUsuario);
         }
 
         public void Cadastrar(Usuario novoUsuario)
