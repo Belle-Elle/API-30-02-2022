@@ -25,22 +25,27 @@ namespace APISenaiSCS.Repositories
 
         public Campanha BuscarPorId(int id)
         {
-            throw new System.NotImplementedException();
+            return ctx.Campanha.FirstOrDefault(e => e.Id == id);
         }
 
         public Campanha Cadastrar(Campanha novaCampanha)
         {
-            throw new System.NotImplementedException();
+            ctx.Campanha.Add(novaCampanha);
+            ctx.SaveChangesAsync();
+            return novaCampanha;
         }
 
         public void Deletar(int idCampanhas)
         {
-            throw new System.NotImplementedException();
+            ctx.Campanha.Remove(BuscarPorId(idCampanhas));
+
+            ctx.SaveChanges();
         }
 
         public List<Campanha> Listar()
         {
-            throw new System.NotImplementedException();
+            return ctx.Campanha.ToList();
+        
         }
     }
 }

@@ -23,20 +23,20 @@ namespace APISenaiSCS.Interface
         /// <summary>
         /// Cadastra um novo Usuario
         /// </summary>
-        /// <param name="novoUsuario">Objeto novoUsuario com os dados que serão cadastrados</param>
+        /// <param name="novaCampanha">Objeto novoUsuario com os dados que serão cadastrados</param>
         Campanha Cadastrar(Campanha novaCampanha);
 
         /// <summary>
         /// Atualiza um Prontuario existente
         /// </summary>
-        /// <param name="idUsuario">ID do Usuario que será atualizado</param>
-        /// <param name="usuarioAtualizado">Objeto usuarioioAtualizado com as novas informações</param>
+        /// <param name="idCampanhas">ID do Usuario que será atualizado</param>
+        /// <param name="campanhaAtualizada">Objeto usuarioioAtualizado com as novas informações</param>
         void Atualizar(int idCampanhas, Campanha campanhaAtualizada);
 
         /// <summary>
         /// Deleta um Usuario existente
         /// </summary>
-        /// <param name="IdCampanhas">ID do Usuario que será deletado</param>
+        /// <param name="idCampanhas">ID do Usuario que será deletado</param>
         void Deletar(int idCampanhas);
 
 
